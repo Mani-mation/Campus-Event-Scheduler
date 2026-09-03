@@ -13,12 +13,15 @@ The project models "minimum room scheduling" as a classic **Graph Coloring Probl
 
 ## Technical Overview
 
-1. **Modeling Events:** Events are stored as instances of the `Event` dataclass containing tracking details, time ranges, and room assignment states[cite: 1].
+1. **Modeling Events:** Events are stored as instances of the `Event` dataclass containing tracking details, time ranges, and room assignment states.
 2. **Conflict Graph Construction:** Compares pairs of events to generate an adjacency list where an edge represents an overlapping time slot .
 3. **Greedy Graph Coloring:** Iterates through events and assigns the lowest available room index (`Room-1`, `Room-2`, etc.) not used by any adjacent conflicting neighbors .
 
 ## Project Structure
- event.py          # Event dataclass and time-overlap detection logic
- scheduler.py      # Core scheduling engine (conflict graph & room assignment)
- main.py           # Application entry point (Demo & Interactive modes)
- test_scheduler.py # Unit tests covering edge cases and scheduling rules
+ >event.py          # Event dataclass and time-overlap detection logic
+ 
+ >scheduler.py      # Core scheduling engine (conflict graph & room assignment)
+ 
+ >main.py           # Application entry point (Demo & Interactive modes)
+ 
+ >test_scheduler.py # Unit tests covering edge cases and scheduling rules
